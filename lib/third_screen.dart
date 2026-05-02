@@ -6,22 +6,33 @@ class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Layar Ketiga")),
-      body: Center(
+      appBar: AppBar(title: const Text("PROFIL SAYA")),
+      body: Padding(
+        padding: const EdgeInsets.all(30),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.check_circle_outline, size: 80, color: Colors.green),
-            const SizedBox(height: 20),
-            const Text("Halaman Terakhir", style: TextStyle(fontSize: 18)),
-            const SizedBox(height: 40),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.redAccent,
-                foregroundColor: Colors.white,
+            const CircleAvatar(radius: 50, backgroundColor: Color(0xFF0D47A1), child: Icon(Icons.account_circle, size: 70, color: Colors.white)),
+            const SizedBox(height: 30),
+            // Profile Info Card
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20), border: Border.all(color: Colors.black12)),
+              child: const Column(
+                children: [
+                  ListTile(leading: Icon(Icons.badge), title: Text("Nama"), subtitle: Text("Riko Bagus Saputra")),
+                  Divider(),
+                  ListTile(leading: Icon(Icons.fingerprint), title: Text("NIM"), subtitle: Text("224140214")),
+                  Divider(),
+                  ListTile(leading: Icon(Icons.class_), title: Text("Kelas"), subtitle: Text("4ITA1")),
+                  Divider(),
+                  ListTile(leading: Icon(Icons.school), title: Text("Jurusan"), subtitle: Text("Teknik Informatika")),
+                ],
               ),
+            ),
+            const Spacer(),
+            TextButton(
               onPressed: () => Navigator.popUntil(context, (route) => route.isFirst),
-              child: const Text("Kembali ke Awal"),
+              child: const Text("LOGOUT", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
             ),
           ],
         ),
