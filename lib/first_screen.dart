@@ -16,8 +16,6 @@ class FirstScreen extends StatelessWidget {
             const Icon(Icons.admin_panel_settings_rounded, size: 100, color: Color(0xFF0D47A1)),
             const SizedBox(height: 20),
             const Text("SISTEM AKADEMIK", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: Color(0xFF0D47A1))),
-            const SizedBox(height: 10),
-            const Text("Silahkan login untuk melanjutkan", style: TextStyle(color: Colors.grey)),
             const SizedBox(height: 60),
             SizedBox(
               width: double.infinity,

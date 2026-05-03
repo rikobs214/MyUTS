@@ -16,10 +16,7 @@ class SecondScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text("Selamat Datang di Beranda Utama", style: TextStyle(fontSize: 16, color: Colors.grey)),
-              const SizedBox(height: 10),
-              const Text("Aplikasi Mahasiswa", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               const SizedBox(height: 40),
-              // Dashboard Action Card
               InkWell(
                 onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const ThirdScreen())),
                 child: Container(

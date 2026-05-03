@@ -13,7 +13,6 @@ class ThirdScreen extends StatelessWidget {
           children: [
             const CircleAvatar(radius: 50, backgroundColor: Color(0xFF0D47A1), child: Icon(Icons.account_circle, size: 70, color: Colors.white)),
             const SizedBox(height: 30),
-            // Profile Info Card
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20), border: Border.all(color: Colors.black12)),
